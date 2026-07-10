@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://jvision-esg-energy-carbon.vercel.app"),
   title: "Jvision ESG 能源與碳管理平台",
-  description: "整合能源監控、溫室氣體盤查、Scope 1/2/3、減碳任務與 AI 摘要的互動 Demo。",
+  description: "整合能源監控、溫室氣體盤查、排放分類、減碳任務與 AI 摘要的互動 Demo。",
   openGraph: {
     title: "Jvision ESG 能源與碳管理平台",
     description: "可以實際操作的 ESG 能源與碳管理 Demo。",

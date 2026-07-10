@@ -49,7 +49,7 @@ const posterSvg = `<?xml version="1.0" encoding="UTF-8"?>
   <text x="200" y="884" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">設備用電</text>
   <text x="200" y="924" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">異常狀態</text>
   <text x="522" y="830" fill="#0D6B45" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="31" font-weight="900">碳盤查</text>
-  <text x="522" y="884" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">Scope 1/2/3</text>
+  <text x="522" y="884" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">排放分類</text>
   <text x="522" y="924" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">排放熱點</text>
   <text x="844" y="830" fill="#0D6B45" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="31" font-weight="900">AI 摘要</text>
   <text x="844" y="884" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="25">節能任務</text>
@@ -102,7 +102,7 @@ await createPdf(localPosterPdf, (doc) => {
   doc.font("regular").fontSize(11).fillColor("#66756D").text("可操作 Demo：新增盤查資料、接入能源設備、切換設備狀態、建立節能任務並生成 AI 摘要。", 58, 342, { width: 470, lineGap: 7 });
   doc.roundedRect(58, 430, 330, 136, 10).fill("#F3FAF5");
   doc.font("bold").fontSize(15).fillColor("#0D6B45").text("Demo 測試重點", 80, 456);
-  doc.font("regular").fontSize(11).fillColor("#66756D").text("1. 能源設備監控\n2. Scope 1/2/3 盤查\n3. 減碳任務追蹤\n4. AI 熱點摘要", 80, 488, { width: 270, lineGap: 6 });
+  doc.font("regular").fontSize(11).fillColor("#66756D").text("1. 能源設備監控\n2. 排放分類盤查\n3. 減碳任務追蹤\n4. AI 熱點摘要", 80, 488, { width: 270, lineGap: 6 });
   doc.roundedRect(414, 430, 102, 102, 8).stroke("#DCE8DF");
   doc.image(qrPng, 422, 438, { width: 86 });
   doc.font("bold").fontSize(15).fillColor("#102019").text("掃描進入 Demo", 58, 620);

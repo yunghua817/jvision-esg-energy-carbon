@@ -50,6 +50,10 @@ const scopeNotes: Record<ScopeName, string> = {
   "Scope 3": "價值鏈間接排放",
 };
 
+function displayScope(scope: ScopeName) {
+  return `${scopeNotes[scope]}（${scope}）`;
+}
+
 function formatNumber(value: number) {
   return new Intl.NumberFormat("zh-TW", { maximumFractionDigits: 2 }).format(value);
 }
@@ -78,7 +82,7 @@ export function EsgEnergyCarbonDemo() {
     { id: 2, title: "辦公室照明自動關閉", owner: "行政部", saving: 5, status: "待評估" },
   ]);
   const [logs, setLogs] = useState<string[]>([
-    "已同步能源資料並更新 Scope 2 排放量。",
+    "已同步能源資料並更新外購能源排放（Scope 2）。",
     "產線空壓機用電高於基準，已建立改善任務。",
   ]);
   const [aiSummary, setAiSummary] = useState(
@@ -145,7 +149,7 @@ export function EsgEnergyCarbonDemo() {
       status: "正常" as MeterStatus,
     };
     setMeters((rows) => [meter, ...rows]);
-    setLogs((rows) => [`已接入 ${meter.name} 能源資料，系統將同步估算 Scope 2。`, ...rows]);
+    setLogs((rows) => [`已接入 ${meter.name} 能源資料，系統將同步估算外購能源排放（Scope 2）。`, ...rows]);
     event.currentTarget.reset();
   }
 
@@ -166,7 +170,7 @@ export function EsgEnergyCarbonDemo() {
     const top = sortedSources[0];
     const scopeTwoShare = totals.total ? (totals.byScope["Scope 2"] / totals.total) * 100 : 0;
     setAiSummary(
-      `目前總排放 ${formatTon(totals.total)}，最大來源是「${top.site} / ${top.source}」。Scope 2 佔比 ${formatNumber(scopeTwoShare)}%，建議先處理尖峰用電、設備排程與綠電採購。`,
+      `目前總排放 ${formatTon(totals.total)}，最大來源是「${top.site} / ${top.source}」。外購能源排放（Scope 2）佔比 ${formatNumber(scopeTwoShare)}%，建議先處理尖峰用電、設備排程與綠電採購。`,
     );
     setLogs((rows) => ["AI 已完成能源與碳排熱點分析。", ...rows]);
   }
@@ -199,7 +203,7 @@ export function EsgEnergyCarbonDemo() {
             <button type="submit">新增盤查資料</button>
           </form>
           <p className="status-message">
-            目前係數：{selectedFactor.source} / 單位 {selectedFactor.unit} / {selectedFactor.factor} kgCO2e / {selectedFactor.scope}，{scopeNotes[selectedFactor.scope]}。
+            目前係數：{selectedFactor.source} / 單位 {selectedFactor.unit} / {selectedFactor.factor} kgCO2e / {displayScope(selectedFactor.scope)}。
           </p>
         </section>
 

@@ -4,7 +4,7 @@ const logoUrl = "https://www.jvision-ai.com/public/logo.png";
 
 const features = [
   ["能源監控", "整合電表、設備與場域用電，快速掌握即時 kW、月用電與異常狀態。"],
-  ["碳盤查資料", "把活動數據、排放係數、Scope 1/2/3 與負責單位集中管理。"],
+  ["碳盤查資料", "把活動數據、排放係數、直接排放、外購能源排放與供應鏈排放集中管理。"],
   ["ESG 報表", "以 ISO 14064-1 與 GHG Protocol 的邏輯整理排放熱點與查核資料。"],
   ["減碳任務", "從排放來源直接建立改善任務，追蹤節能率、負責人與完成狀態。"],
   ["AI 摘要", "自動整理能源風險、碳排熱點、節能建議與下一步行動。"],
@@ -41,7 +41,7 @@ export default function Home() {
           <p className="eyebrow">Jvision ESG Energy & Carbon Platform</p>
           <h1>把能源監控、碳盤查、減碳任務與 AI 摘要整合成一個管理平台。</h1>
           <p className="hero-text">
-            Jvision 協助企業把電表設備、用電異常、活動數據、Scope 1/2/3 排放量、查核資料與節能改善任務放在同一個工作台，
+            Jvision 協助企業把電表設備、用電異常、活動數據、排放分類、查核資料與節能改善任務放在同一個工作台，
             讓 ESG、廠務、行政與管理團隊可以一起看見風險並追蹤改善。
           </p>
           <div className="hero-actions">
@@ -62,9 +62,9 @@ export default function Home() {
             <article className="hero-metric"><span>即時用電</span><strong>314 kW</strong></article>
             <article className="hero-metric"><span>預估節能</span><strong>13%</strong></article>
             <article className="chart-card">
-              <div className="bar"><strong>Scope 1</strong><i style={{ width: "38%" }} /><span>6.01</span></div>
-              <div className="bar"><strong>Scope 2</strong><i style={{ width: "86%" }} /><span>21.14</span></div>
-              <div className="bar"><strong>Scope 3</strong><i style={{ width: "28%" }} /><span>2.47</span></div>
+              <div className="bar"><strong>直接排放</strong><i style={{ width: "38%" }} /><span>6.01</span></div>
+              <div className="bar"><strong>外購能源排放</strong><i style={{ width: "86%" }} /><span>21.14</span></div>
+              <div className="bar"><strong>供應鏈排放</strong><i style={{ width: "28%" }} /><span>2.47</span></div>
             </article>
             <article className="standard-card">
               <div><strong>ISO 14064-1</strong><span>盤查資料與查核準備</span></div>
