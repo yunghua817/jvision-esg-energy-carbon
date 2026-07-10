@@ -1,4 +1,4 @@
-import { mkdir, writeFile, copyFile } from "node:fs/promises";
+﻿import { mkdir, writeFile, copyFile } from "node:fs/promises";
 import path from "node:path";
 import PDFDocument from "pdfkit";
 import QRCode from "qrcode";
@@ -40,7 +40,7 @@ const posterSvg = `<?xml version="1.0" encoding="UTF-8"?>
   <text x="154" y="382" fill="#FFFFFF" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="62" font-weight="900">ESG 能源與碳管理平台</text>
   <text x="116" y="522" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="39" font-weight="900">能源監控、溫室氣體盤查、減碳任務</text>
   <text x="116" y="578" fill="#102019" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="39" font-weight="900">與 AI 摘要一次完成</text>
-  <text x="116" y="636" fill="#66756D" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="27">整合原本的組織溫室氣體盤查平台與能源管理系統，原專案保留不刪除。</text>
+  <text x="116" y="636" fill="#66756D" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="27">整合能源監控、碳盤查、節能任務與 AI 摘要，讓改善進度清楚可追蹤。</text>
   <rect x="116" y="710" width="1008" height="296" rx="24" fill="#F3FAF5" stroke="#DCE8DF" stroke-width="2"/>
   <rect x="164" y="770" width="270" height="172" rx="18" fill="#FFFFFF"/>
   <rect x="486" y="770" width="270" height="172" rx="18" fill="#FFFFFF"/>

@@ -1,4 +1,4 @@
-import { EsgEnergyCarbonDemo } from "../components/esg-energy-carbon-demo";
+﻿import { EsgEnergyCarbonDemo } from "../components/esg-energy-carbon-demo";
 
 const logoUrl = "https://www.jvision-ai.com/public/logo.png";
 
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">功能模組</p>
           <h2>從用電數據到碳排決策，讓永續管理更容易落地。</h2>
-          <p>這個整合版把「組織溫室氣體盤查平台」與「能源管理系統」合併成新的獨立 Demo，原本兩個專案保留不刪除。</p>
+          <p>這個整合版把「組織溫室氣體盤查平台」與「能源管理系統」合併成新的獨立 Demo，原有展示仍保留。</p>
         </div>
         <div className="feature-grid">
           {features.map(([title, text]) => (
