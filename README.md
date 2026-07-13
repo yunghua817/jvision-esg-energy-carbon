@@ -2,6 +2,10 @@
 
 整合「組織溫室氣體盤查平台」與「能源管理系統」的新獨立 Demo。原有展示仍保留，這個版本專注在 ESG、能源與碳排管理的一體化流程。
 
+## 線上 Demo
+
+https://jvision-esg-energy-carbon.vercel.app
+
 ![Jvision ESG 能源與碳管理平台海報](assets/poster.png)
 
 ## Demo 功能
